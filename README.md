@@ -54,10 +54,3 @@ Mutual_Fund_XRay_Project/
 ├── screenshots/
 
 
----
-
-# STEP 3
-Rename your screenshot file to:
-
-```text id="x4q7pk"
-dashboard.png
