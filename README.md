@@ -1,5 +1,5 @@
 # Mutual Fund X-Ray Analyzer
-
+![Dashboard](screenshots/dashboard2.png)
 ## Project Overview
 
 This project analyzes mutual fund portfolios using Python and Power BI.
@@ -38,7 +38,7 @@ The goal is to help investors understand diversification risk and portfolio conc
 
 ## Dashboard Preview
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard2.png)
 
 
 ---
