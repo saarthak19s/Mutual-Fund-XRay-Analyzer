@@ -1,14 +1,9 @@
-# =====================================
-# IMPORT LIBRARIES
-# =====================================
+
 
 import pandas as pd
 import ast
 
 
-# =====================================
-# LOAD RAW DATASET
-# =====================================
 
 df = pd.read_csv(
     r"C:\Users\HP\Desktop\Mutual_Fund_XRay_Project\raw\Mutual Funds Indian Market.csv"
@@ -50,10 +45,7 @@ holdings_expanded = pd.json_normalize(df['stock_holdings'])
 # PRESERVE FUND INFORMATION
 # =====================================
 
-final_holdings = pd.concat(
-    [df[['basic_info']], holdings_expanded],
-    axis=1
-)
+final_holdings = pd.concat([df[['basic_info']], holdings_expanded],axis=1)
 
 
 # =====================================
@@ -75,10 +67,7 @@ basic_info_expanded = pd.json_normalize(final_holdings['basic_info'])
 # CREATE FINAL ANALYTICAL TABLE
 # =====================================
 
-final_holdings = pd.concat(
-    [basic_info_expanded, holdings_expanded],
-    axis=1
-)
+final_holdings = pd.concat([basic_info_expanded, holdings_expanded],axis=1)
 
 
 # =====================================
@@ -94,10 +83,7 @@ final_holdings['assets'] = final_holdings['assets'].astype(float)
 # EXPORT CLEAN DATASET
 # =====================================
 
-final_holdings.to_csv(
-    r"C:\Users\HP\Desktop\Mutual_Fund_XRay_Project\data\cleaned\clean_holdings.csv",
-    index=False
-)
+final_holdings.to_csv(r"C:\Users\HP\Desktop\Mutual_Fund_XRay_Project\data\cleaned\clean_holdings.csv",index=False)
 
 
 # =====================================
